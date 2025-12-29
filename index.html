@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>New Year</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+<style>
+ body{
+   justify-content: center; /* Centers horizontally */
+  align-items: center;
+   color:black;
+   font-family:forte;
+   }
+    .book-shadow{
+			          filter:drop-shadow(20px 8px 6px black);
+					  font-family:Castellar;
+					  text-align:center;
+					  color:red;
+				}
+	  .btstyle{
+	               width:150px;
+				   item-align:center;
+				   font-family:forte;
+			   }
+	.btstyle:hover{
+	             font-family:times new roman;
+				 color:red;
+				 width:250px;
+				 background-color:black;
+				 transition:3s;
+	}
+	.img{
+			background-image: url("rapunzel.JPG");
+			        width:450px;
+					height:500px;
+					background-size:cover;
+					position:relative;
+					background-repeat:no-repeat;
+	        filter:drop-shadow(20px 8px 6px gray);
+	}
+	.scal{
+					animation: rotate 2s ease 1;
+				}
+			@keyframes rotate{
+					0%,50%{
+						color:red;
+						transform:	translate(50px,150px);
+						}
+						50%{
+						 color:red;
+						 transform:width 2s,height 2s;
+						 }
+					}
+					.zoom-in-zoom-out{
+						animation: sh 3s ease 1;
+						 
+				    }
+					@keyframes sh {
+					0% {
+							transition-delay:2s;
+							transform: skewy(180deg);  
+ 						}
+					 
+			  
+					}
+	
+</style>
+ <body>
+ <div class="container">
+      <div class="row view">
+	      <h1 class="book-shadow scal">welcome</h1>
+	  </div>
+	  <div class="row">
+	      <div class ='col-sm-2'>
+				
+				<h1 class="book-shadow zoom-in-zoom-out">HAPPY NEW YEAR  2026</h1>
+				<p> </p>
+              <button onclick="document.location='moon.html'"class="btn  btn-primary btstyle "type="button">Hold&Release Me</button>  
+		   </div>
+		   <div class ='col-sm-10'>
+		   <h1></h1>
+		<div class="img img-fluid rounded"></div>
+		</div>
+ </div>
+ </div
+        </body>
+        </html>
+        
