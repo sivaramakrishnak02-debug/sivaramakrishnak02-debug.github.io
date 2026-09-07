@@ -282,7 +282,32 @@ window.addEventListener("resize", () => {
     canvas.height = window.innerHeight;
 });
 </script>
+<script>
+  // 1. Get the 'user' parameter from the URL (e.g., ?user=Alex)
+  const urlParams = new URLSearchParams(window.location.search);
+  const friendName = urlParams.get('user');
 
+  // 2. Only send the email if a user name exists in the link
+  if (friendName) {
+    // Replace the URL below with YOUR actual Formspree endpoint URL
+    const formspreeUrl = 'https://formspree.io';
+
+    fetch(formspreeUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        visitor: friendName,
+        message: `${friendName} just opened your website!`,
+        timestamp: new Date().toLocaleString()
+      })
+    })
+    .then(response => console.log('Tracker updated.'))
+    .catch(error => console.error('Error:', error));
+  }
+</script>
 </body>
 </html>
 
